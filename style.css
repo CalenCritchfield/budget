@@ -197,6 +197,63 @@ body {
   color: #0f172a;
 }
 
+.archive-selector {
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.month-button {
+  background: #f1f5f9;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.month-button:hover {
+  background: #e2e8f0;
+}
+
+.month-button.active {
+  background: var(--primary);
+  color: white;
+}
+
+.month-button.current {
+  border: 2px solid var(--primary);
+}
+
+.archive-info {
+  width: 100%;
+  text-align: center;
+  color: #64748b;
+  padding: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 1rem;
+  }
+
+  .balance-amount {
+    font-size: 2rem;
+  }
+
+  .month-button {
+    flex: 1;
+    min-width: calc(33.333% - 0.5rem);
+    text-align: center;
+  }
+}
+
 @media (max-width: 640px) {
   body {
     padding: 1rem;
